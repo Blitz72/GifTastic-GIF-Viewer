@@ -1,0 +1,65 @@
+body {
+	background: url("https://i.pinimg.com/originals/0c/1b/54/0c1b541757e16d7c32736c0ec00d416f.jpg");
+	background-repeat: none;
+	width: 100%;
+	height: auto;
+	color: #b3bdce;
+	font-family: 'Arial';
+}
+
+h1, label {
+	margin-left: 10px;
+}
+
+h1 {
+	margin: 35px 0px 35px 10px;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+button {
+	padding: 3px 7px 3px 7px;
+	margin: 0px 0px 10px 10px;
+}
+
+div,
+form,
+input,
+img {
+	margin: 10px 0px 0px 10px;
+}
+
+.topic, input {
+	background-color: #1d3966;
+	font-size: 15px;
+	color: #b3bdce;
+}
+
+#topic-input {
+	padding: 3px 7px 3px 7px;
+	background-color: #aab3c1;
+	color: black;
+}
+
+#add-topic {
+	padding: 3px 7px 3px 7px;
+}
+
+#message-div {
+	margin: 25px 0px 0px 20px;
+}
+
+.rating-div {
+	margin: 0px 0px 10px 10px;
+}
+
+span {
+	font-size: 15px;
+	padding: 3px;
+	background: rgba(7, 22, 45, 0.7);
+}
+
+.gif-div {
+	float: left;
+}
+
