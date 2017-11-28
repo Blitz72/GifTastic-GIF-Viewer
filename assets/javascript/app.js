@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
 var topics = ["Darth Vader", "Luke Skywalker", "Obi Wan Kenobi", "R2-D2", "C-3PO", "Jar Jar Binks",
- "James T. Kirk", "Mr. Spock", "Captain Picard", "Worf", "Commander Data", "Alf"]
+ "James T. Kirk", "Mr. Spock", "Captain Picard", "Worf", "Commander Data", "Alf"];
+
+ var newMessage = $('<div class="new-msg">');
 
 // Function for displaying movie data
 function renderButtons() {
@@ -30,7 +32,7 @@ function renderButtons() {
 }
 
 $(document).on('click', '.topic', function(event) {
-  $('#message-div').text("Click on an image to play/pause the GIF!");
+  newMessage.html("Click on an image to play/pause the GIF!");
   var character = $(this).attr('data-name');
   var queryURL = "https://api.giphy.com/v1/gifs/search?q="
                    + character + "&api_key=LJ2ETZ8e0mEtJyVfzhLnoCVqAGArNRiA&limit=10";
@@ -93,6 +95,7 @@ $("#add-topic").on("click", function(event) {
 // Calling the renderButtons function at least once to display the initial list of movies
 renderButtons();
 $('#message-div').text('Use the textbox to add your favorite movie/TV character to the list (who says the "USS Enterprise" isn\'t a valid character? :) )');
-
+newMessage.html('Click on a character button to show related GIF\'s.');
+$('#message-div').append(newMessage);
 
 });
