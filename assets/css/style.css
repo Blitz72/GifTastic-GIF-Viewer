@@ -46,6 +46,11 @@ input {
 	color: #b3bdce;
 }
 
+.topic:hover, #add-topic:hover {
+	cursor: pointer;
+	background: #2b456d;
+}
+
 #topic-input {
 	padding: 3px;
 	background-color: #aab3c1;
