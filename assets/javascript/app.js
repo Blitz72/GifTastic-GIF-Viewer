@@ -38,7 +38,19 @@ $(document).on('click', '.topic', function(event) {
                    + character + "&api_key=LJ2ETZ8e0mEtJyVfzhLnoCVqAGArNRiA&limit=10";
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
+    // error: function(jqxhr, textStatus, errorThrown){
+    //   console.log('jQuery xhr:');
+    //   console.log(jqxhr);
+    //   console.log('Text Status:');
+    //   console.log(textStatus);
+    //   console.log('Thrown error:');
+    //   console.log(errorThrown);
+    // },
+    // statusCode: function(){
+    //   console.log('Status Code:');
+    //   console.log(statusCode);
+    // }
   })
   // After the data comes back from the API
   .done(function(response) {
@@ -46,6 +58,7 @@ $(document).on('click', '.topic', function(event) {
     for (var i = 0; i < response.data.length; i++){
       var gifDiv = $('<div class="gif-div">');
       var img = $('<img>').attr('src', response.data[i].images.fixed_height_still.url);
+      img.attr('alt', character);
       img.attr('data-still', response.data[i].images.fixed_height_still.url);
       img.attr('data-animate', response.data[i].images.fixed_height.url);
       img.attr('data-state', 'still');
@@ -62,6 +75,17 @@ $(document).on('click', '.topic', function(event) {
     // console.log(response.data[0].images.fixed_height);
   });
 });
+
+// $(document).ajaxError(function(event, jqxhr, settings, thrownError){
+//   console.log('Event:');
+//   console.log(event);
+//   console.log('jQuery xhr:');
+//   console.log(jqxhr);
+//   console.log('Settings:');
+//   console.log(settings);
+//   console.log('Thrown error:');
+//   console.log(thrownError);
+// })
 
 $(document).on('click', '.gif', function(event) {
   console.log(this);

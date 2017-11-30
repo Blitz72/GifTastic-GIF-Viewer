@@ -4,7 +4,11 @@ body {
 	width: 100%;
 	height: auto;
 	color: #b3bdce;
-	font-family: 'Arial';
+	/*font-family: 'Arial';*/
+	font-family: 'Exo', sans-serif;
+	/*font-family: 'Titillium Web', sans-serif;*/
+	font-size: 18px;
+
 }
 
 h1, label {
@@ -13,11 +17,13 @@ h1, label {
 
 h1 {
 	margin: 35px 0px 35px 10px;
-	font-size: 50px;
+	font-size: 55px;
 	font-weight: bold;
 }
 
 button {
+	font-family: 'Exo', sans-serif;
+	/*font-family: 'Titillium Web', sans-serif;*/
 	padding: 3px 7px 3px 7px;
 	margin: 0px 0px 10px 10px;
 }
@@ -29,9 +35,14 @@ img {
 	margin: 10px 0px 0px 10px;
 }
 
+input {
+	font-family: 'Exo', sans-serif;
+	/*font-family: 'Titillium Web', sans-serif;*/
+}
+
 .topic, input {
 	background-color: #1d3966;
-	font-size: 15px;
+	font-size: 16px;
 	color: #b3bdce;
 }
 
