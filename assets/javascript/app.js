@@ -35,7 +35,7 @@ $(document).on('click', '.topic', function(event) {
   newMessage.html("Click on an image to play/pause the GIF!");
   var character = $(this).attr('data-name');
   var queryURL = "https://api.giphy.com/v1/gifs/search?q="
-                   + character + "&api_key=LJ2ETZ8e0mEtJyVfzhLnoCVqAGArNRiA&limit=10";
+                   + character + "&api_key=LJ2ETZ8e0mEtJyVfzhLnoCVqAGArNRiA&rating=pg-13&limit=10";
   $.ajax({
     url: queryURL,
     method: "GET",
